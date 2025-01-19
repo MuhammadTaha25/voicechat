@@ -12,6 +12,10 @@ from langchain_google_genai import GoogleGenerativeAI
 from operator import itemgetter
 from dotenv import load_dotenv
 from bs4 import SoupStrainer
+import torch
+from transformers import pipeline
+import librosa
+import io
 
 # Load environment variables (like API keys) from a .env file.
 load_dotenv()
@@ -85,11 +89,6 @@ st.title("Ask Anything About Elon Musk")
 
 # Create a container for displaying chat history.
 
-
-
-
-
-
 # Initialize session state to keep track of chat history.
 if "messages" not in st.session_state:
     st.session_state.messages = []  # Store user and AI messages.
@@ -97,6 +96,27 @@ if "messages" not in st.session_state:
 # Function to trigger input processing.
 def send_input():
     st.session_state.send_input = True
+
+def convert_bytes_to_array(audio_bytes):
+    audio_bytes = io.BytesIO(audio_bytes)
+    audio, sample_rate = librosa.load(audio_bytes)
+    print(sample_rate)
+    return audio
+
+def transcribe_audio(audio_bytes):
+    device = "cuda:0" if torch.cuda.is_available() else "cpu"
+
+    pipe = pipeline(
+        task="automatic-speech-recognition",
+        model="openai/whisper-small",
+        chunk_length_s=30,
+        device=device,
+    )   
+
+    audio_array = convert_bytes_to_array(audio_bytes)
+    prediction = pipe(audio_array, batch_size=1)["text"]
+    return prediction
+    
 chat_container = st.container()
 # Input section for user queries.
 with chat_container:

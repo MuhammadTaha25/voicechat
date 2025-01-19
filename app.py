@@ -97,11 +97,20 @@ if "messages" not in st.session_state:
 def send_input():
     st.session_state.send_input = True
 
+import io
+import librosa
+
 def convert_bytes_to_array(audio_bytes):
-    audio_bytes = io.BytesIO(audio_bytes)
-    audio, sample_rate = librosa.load(audio_bytes, sr=None)
-    print(sample_rate)
-    return audio,sample_rate
+    # Convert byte data to a file-like object using BytesIO
+    audio_buffer = io.BytesIO(audio_bytes)
+    try:
+        # Load the audio from the buffer
+        audio, sample_rate = librosa.load(audio_buffer, sr=None)  # sr=None to preserve the sample rate
+        return audio, sample_rate
+    except Exception as e:
+        print(f"Error loading audio: {e}")
+        return None, None
+
 
 def transcribe_audio(audio_bytes):
     device = "cuda:0" if torch.cuda.is_available() else "cpu"

@@ -89,7 +89,7 @@ chat_container = st.container()
 with voice_recording_column:
     voice_recording=mic_recorder(start_prompt="Start recording",stop_prompt="Stop recording", just_once=True)
 with send_button_column:
-    send_button = st.button("Send", key="send_button", on_click=clear_input_field)
+    send_button = st.button("Send", key="send_button", )
 
 if voice_recording:
     transcribed_audio = transcribe_audio(voice_recording["bytes"])

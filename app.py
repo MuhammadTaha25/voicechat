@@ -87,9 +87,7 @@ st.title("Ask Anything About Elon Musk")
 
 
 
-if voice_recording:
-    transcribed_audio = transcribe_audio(voice_recording["bytes"])
-    query=print(transcribed_audio)
+
 
 
 # Initialize session state to keep track of chat history.
@@ -109,7 +107,10 @@ with voice_recording_column:
     voice_recording=mic_recorder(start_prompt="Start recording",stop_prompt="Stop recording", just_once=True)
 with send_button_column:
     send_button = st.button("Send", key="send_button", ) # Button to send the query.
-
+    
+if voice_recording:
+    transcribed_audio = transcribe_audio(voice_recording["bytes"])
+    query=print(transcribed_audio)
 # Process the user's query and generate a response.
 if send_button or st.session_state.get("send_input") and query or voice_recording:
     with st.spinner("Processing... Please wait!"):  # Display a spinner while processing.

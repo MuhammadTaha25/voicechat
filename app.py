@@ -106,7 +106,7 @@ def send_input():
 
 # Input section for user queries.
 with st.container():
-    query = st.text_input("Please enter a query", key="query", on_change=send_input)  # Input box for questions.
+    query = st.text_input("Please enter a query", key="query", on_change=send_input())  # Input box for questions.
     send_button = st.button("Send", key="send_btn")  # Button to send the query.
 
 # Process the user's query and generate a response.

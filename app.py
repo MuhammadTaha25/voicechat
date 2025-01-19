@@ -110,7 +110,7 @@ with send_button_column:
     
 if voice_recording:
     transcribed_audio = transcribe_audio(voice_recording["bytes"])
-    query=print(transcribed_audio)
+    query=transcribed_audio
 # Process the user's query and generate a response.
 if send_button or st.session_state.get("send_input") and query or voice_recording:
     with st.spinner("Processing... Please wait!"):  # Display a spinner while processing.

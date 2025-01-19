@@ -120,11 +120,21 @@ def transcribe_audio(audio_bytes):
         model="openai/whisper-small",
         chunk_length_s=30,
         device=device,
-    )   
 
-    audio_array = convert_bytes_to_array(audio_bytes)
+    # Convert bytes to an audio array (using librosa or any other method)
+    audio_array, sample_rate = convert_bytes_to_array(audio_bytes)
+    
+    if audio_array is None:
+        return "Error processing audio"
+    
+    # Ensure audio_array is a numpy array (in case it's not)
+    if not isinstance(audio_array, np.ndarray):
+        audio_array = np.array(audio_array)
+    
+    # Pass audio_array to the speech recognition pipeline
     prediction = pipe(audio_array, batch_size=1)["text"]
     return prediction
+
     
 chat_container = st.container()
 # Input section for user queries.

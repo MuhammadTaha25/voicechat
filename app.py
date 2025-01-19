@@ -91,9 +91,9 @@ with voice_recording_column:
 with send_button_column:
     send_button = st.button("Send", key="send_button", on_click=clear_input_field)
 
- if voice_recording:
-        transcribed_audio = transcribe_audio(voice_recording["bytes"])
-        query=print(transcribed_audio)
+if voice_recording:
+    transcribed_audio = transcribe_audio(voice_recording["bytes"])
+    query=print(transcribed_audio)
 
 
 # Initialize session state to keep track of chat history.

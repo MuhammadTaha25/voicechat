@@ -120,7 +120,7 @@ def transcribe_audio(audio_bytes):
 chat_container = st.container()
 # Input section for user queries.
 with chat_container:
-    query = st.text_input("Please enter a query", key="query", on_change=send_input())  # Input box for questions.
+    query = st.text_input("Please enter a query", key="query", on_change=send_input)  # Input box for questions.
     
 voice_recording_column, send_button_column = st.columns(2)
 with voice_recording_column:
@@ -131,11 +131,14 @@ with send_button_column:
 if voice_recording :
     transcribed_audio = transcribe_audio(voice_recording["bytes"])
     query=transcribed_audio
-
+    with st.spinner("Processing... Please wait!"):  # Display a spinner while processing.
+        response = _chain.invoke({'question': query})  
         
     st.session_state.messages.append(("user", query))
     st.session_state.messages.append(("ai", response))
-
+with chat_container:
+    for role, message in st.session_state.messages:
+        st.chat_message(role).write(message)
 # Display chat messages in the container.
   # Show messages from both user and AI.
 

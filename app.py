@@ -99,9 +99,9 @@ def send_input():
 
 def convert_bytes_to_array(audio_bytes):
     audio_bytes = io.BytesIO(audio_bytes)
-    audio, sample_rate = librosa.load(audio_bytes)
+    audio, sample_rate = librosa.load(audio_bytes, sr=None)
     print(sample_rate)
-    return audio
+    return audio,sample_rate
 
 def transcribe_audio(audio_bytes):
     device = "cuda:0" if torch.cuda.is_available() else "cpu"

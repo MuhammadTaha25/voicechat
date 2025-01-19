@@ -127,7 +127,7 @@ with st.container():
     voice_recording=mic_recorder(start_prompt="Start recording",stop_prompt="Stop recording", just_once=True)
 
     
-if voice_recording :
+if voice_recording:
     transcribed_audio = transcribe_audio(voice_recording["bytes"])
     query=transcribed_audio
     with st.spinner("Processing... Please wait!"):  # Display a spinner while processing.
@@ -142,7 +142,7 @@ with chat_container:
   # Show messages from both user and AI.
 
 # Process the user's query and generate a response.
-if send_button or st.session_state.get("send_input") and query or voice_recording:
+if send_button or st.session_state.get("send_input") and query :
     with st.spinner("Processing... Please wait!"):  # Display a spinner while processing.
         response = _chain.invoke({'question': query})  # Generate the response.
     # Save user query and AI response in chat history.

@@ -84,12 +84,8 @@ _chain = setup | _prompt | llm | StrOutputParser()  # Define the complete proces
 st.title("Ask Anything About Elon Musk")
 
 # Create a container for displaying chat history.
-voice_recording_column, send_button_column = st.columns(2)
-chat_container = st.container()
-with voice_recording_column:
-    voice_recording=mic_recorder(start_prompt="Start recording",stop_prompt="Stop recording", just_once=True)
-with send_button_column:
-    send_button = st.button("Send", key="send_button", )
+
+
 
 if voice_recording:
     transcribed_audio = transcribe_audio(voice_recording["bytes"])
@@ -103,11 +99,16 @@ if "messages" not in st.session_state:
 # Function to trigger input processing.
 def send_input():
     st.session_state.send_input = True
-
+chat_container = st.container()
 # Input section for user queries.
-with st.container():
+with chat_container:
     query = st.text_input("Please enter a query", key="query", on_change=send_input())  # Input box for questions.
-    send_button = st.button("Send", key="send_btn")  # Button to send the query.
+    
+voice_recording_column, send_button_column = st.columns(2)
+with voice_recording_column:
+    voice_recording=mic_recorder(start_prompt="Start recording",stop_prompt="Stop recording", just_once=True)
+with send_button_column:
+    send_button = st.button("Send", key="send_button", )send_button = st.button("Send", key="send_btn")  # Button to send the query.
 
 # Process the user's query and generate a response.
 if send_button or st.session_state.get("send_input") and query or voice_recording:

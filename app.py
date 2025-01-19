@@ -120,7 +120,7 @@ def transcribe_audio(audio_bytes):
         model="openai/whisper-small",
         chunk_length_s=30,
         device=device,
-
+    )
     # Convert bytes to an audio array (using librosa or any other method)
     audio_array, sample_rate = convert_bytes_to_array(audio_bytes)
     

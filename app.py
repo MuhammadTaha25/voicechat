@@ -108,7 +108,7 @@ voice_recording_column, send_button_column = st.columns(2)
 with voice_recording_column:
     voice_recording=mic_recorder(start_prompt="Start recording",stop_prompt="Stop recording", just_once=True)
 with send_button_column:
-    send_button = st.button("Send", key="send_button", )send_button = st.button("Send", key="send_btn")  # Button to send the query.
+    send_button = st.button("Send", key="send_button", ) # Button to send the query.
 
 # Process the user's query and generate a response.
 if send_button or st.session_state.get("send_input") and query or voice_recording:

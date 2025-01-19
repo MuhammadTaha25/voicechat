@@ -121,7 +121,8 @@ chat_container = st.container()
 # Input section for user queries.
 with chat_container:
     query = st.text_input("Please enter a query", key="query", on_change=send_input)  # Input box for questions.
-    
+    send_button = st.button("Send", key="send_btn")  # Button to send the query.
+   
 voice_recording_column, send_button_column = st.columns(2)
 with voice_recording_column:
     voice_recording=mic_recorder(start_prompt="Start recording",stop_prompt="Stop recording", just_once=True)

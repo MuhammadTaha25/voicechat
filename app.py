@@ -123,7 +123,7 @@ with st.container():
     query = st.text_input("Please enter a query", key="query", on_change=send_input)  # Input box for questions.
     send_button = st.button("Send", key="send_btn")  # Button to send the query.
    
-with st.container()
+with st.container():
     voice_recording=mic_recorder(start_prompt="Start recording",stop_prompt="Stop recording", just_once=True)
 
     

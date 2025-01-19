@@ -1,9 +1,9 @@
 import os
 import streamlit as st
 from streamlit_mic_recorder import mic_recorder
-# from audio_handler import transcribe_audio
-# from langchain_community.document_loaders import WebBaseLoader
-# from langchain.text_splitter import RecursiveCharacterTextSplitter
+from audio_handler import transcribe_audio
+from langchain_community.document_loaders import WebBaseLoader
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_qdrant import QdrantVectorStore
 from langchain_core.prompts import ChatPromptTemplate
@@ -19,28 +19,9 @@ import io
 
 # Load environment variables (like API keys) from a .env file.
 load_dotenv()
-
-# Cache the document loading process so it doesn't repeat unnecessarily.
-@st.cache_data
-# def load_document_loader():
-    # Load content from the specified Wikipedia page using WebBaseLoader.
-    # loader = WebBaseLoader(
-    #     'https://en.wikipedia.org/wiki/Elon_Musk',  # URL to fetch content from.
-    #     bs_kwargs=dict(parse_only=SoupStrainer(class_=('mw-content-ltr mw-parser-output')))  # Extract specific content.
-    # )
-    # documents = loader.load()  # Load the content.
-    
-    # Break the loaded content into smaller chunks for easier processing.
-    # recursive = RecursiveCharacterTextSplitter(chunk_size=1500, chunk_overlap=100)
-    # chunks = recursive.split_documents(documents)
-    # return chunks
-
-# Load and process the content into chunks.
-# chunks = load_document_loader()
-
 # Initialize an embedding model (used to convert text into numerical representations for searching).
-embed = HuggingFaceEmbeddings(model_name='BAAI/bge-small-en-v1.5')
 
+embed = HuggingFaceEmbeddings(model_name='BAAI/bge-small-en-v1.5')
 # Get the Qdrant API key from environment variables.
 api_key = os.getenv('qdrant_api_key')
 

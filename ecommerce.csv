@@ -1,0 +1,71 @@
+Category,Item Name,Price (Rs.),Description
+Clothes,Casual Hoodie,799,Soft cotton blend, kangaroo pocket, adjustable drawstring hood, unisex.
+Clothes,Summer Dress,599,Lightweight floral print, sleeveless, knee-length, perfect for casual outings.
+Clothes,Denim Jacket,949,Classic blue denim, button-up front, two chest pockets, stylish and durable.
+Clothes,T-shirt (Graphic Print),499,100% cotton, vibrant print, crew neck, short sleeves.
+Clothes,Formal Shirt,899,Slim-fit, button-up front, long sleeves, breathable fabric.
+Clothes,Cotton Kurta,699,Ethnic wear, embroidered details, lightweight cotton material.
+Clothes,Sweatpants,649,Elastic waistband, relaxed fit, soft and comfortable.
+Clothes,Maxi Skirt,799,High-waisted, flowy fabric, floral design, ankle-length.
+Clothes,Polo Shirt,579,Classic collar, short sleeves, breathable pique fabric.
+Clothes,Sleeveless Top,449,Ribbed cotton material, round neck, casual summer wear.
+Shoes,Running Shoes,999,Breathable mesh upper, cushioned sole, anti-slip outsole.
+Shoes,Leather Loafers,849,Genuine leather, slip-on design, padded insole.
+Shoes,Sandals,449,Adjustable straps, cushioned footbed, durable rubber sole.
+Shoes,Sneakers,899,Low-top design, lace-up closure, comfortable and trendy.
+Shoes,Formal Dress Shoes,949,Classic black leather, pointed toe, slip-resistant sole.
+Shoes,Flip-Flops,299,Lightweight, water-resistant, soft foam footbed.
+Shoes,Hiking Boots,989,Waterproof, rugged sole, ankle support, breathable material.
+Shoes,Espadrilles,579,Canvas upper, slip-on style, lightweight and comfortable.
+Shoes,High Heels,899,Stiletto heel, synthetic upper, padded footbed.
+Shoes,Casual Slippers,349,Soft sole, open-toe design, comfortable for daily wear.
+Laptops,Ultra Slim Laptop,999,13-inch display, Intel Core i5, 8GB RAM, 256GB SSD.
+Laptops,Gaming Laptop,999,15.6-inch display, AMD Ryzen 7, 16GB RAM, 512GB SSD.
+Laptops,Business Laptop,899,Intel Core i3, 4GB RAM, 128GB SSD, lightweight.
+Laptops,Budget Laptop,799,14-inch HD display, Intel Pentium, 4GB RAM, 64GB eMMC.
+Laptops,Convertible Laptop,999,2-in-1 touchscreen, 360-degree hinge, 8GB RAM, 128GB SSD.
+Laptops,Chromebook,699,Chrome OS, 4GB RAM, 32GB storage, lightweight.
+Laptops,Ultrabook,999,Intel Core i7, 512GB SSD, 16GB RAM, thin and sleek design.
+Laptops,Student Laptop,749,14-inch display, 4GB RAM, 256GB SSD, built-in webcam.
+Laptops,Mini Laptop,659,11.6-inch display, lightweight, basic functionality.
+Laptops,Workstation Laptop,999,High-performance processor, 32GB RAM, dedicated graphics.
+Watches,Analog Leather Watch,749,Genuine leather strap, stainless steel case, scratch-resistant glass.
+Watches,Digital Sports Watch,599,LED display, stopwatch, backlight, water-resistant.
+Watches,Smartwatch,999,Touchscreen, heart rate monitoring, GPS, fitness tracking.
+Watches,Classic Gold Watch,949,Gold-tone stainless steel, analog display, water-resistant.
+Watches,Fitness Tracker,799,Step tracking, sleep monitoring, calorie tracking.
+Watches,Chronograph Watch,889,Stopwatch functionality, leather strap, analog display.
+Watches,Kids Digital Watch,449,Bright colors, waterproof, easy-to-read display.
+Watches,Minimalist Watch,699,Simple design, mesh strap, sleek and elegant.
+Watches,Fashion Watch,529,Colorful straps, casual wear, quartz movement.
+Watches,Outdoor Watch,939,Shockproof, water-resistant, compass functionality.
+Accessories,Leather Wallet,499,Genuine leather, multiple card slots, RFID blocking.
+Accessories,Sunglasses,549,UV protection, polarized lenses, lightweight frame.
+Accessories,Backpack,899,Padded straps, multiple compartments, water-resistant material.
+Accessories,Crossbody Bag,749,Adjustable strap, zippered pockets, compact design.
+Accessories,Belt,399,Genuine leather, silver buckle, classic style.
+Accessories,Baseball Cap,349,Cotton material, adjustable strap, embroidered logo.
+Accessories,Scarf,299,Lightweight, soft fabric, printed design.
+Accessories,Tote Bag,599,Canvas material, large capacity, durable handles.
+Accessories,Gloves,399,Thermal lining, touchscreen compatible, snug fit.
+Accessories,Beanie,299,Knitted, warm, one-size-fits-all.
+Home Appliances,Air Fryer,999,3.7-quart capacity, digital touch screen, oil-free cooking.
+Home Appliances,Blender,799,500W motor, stainless steel blades, multi-speed control.
+Home Appliances,Electric Kettle,499,1.7-liter capacity, automatic shut-off, cordless base.
+Home Appliances,Rice Cooker,699,1.5-liter capacity, keep-warm function, non-stick pot.
+Home Appliances,Vacuum Cleaner,999,Lightweight, cordless, HEPA filtration.
+Home Appliances,Toaster,459,2-slice capacity, browning control, pop-up feature.
+Home Appliances,Coffee Maker,899,4-cup capacity, drip-style, easy to clean.
+Home Appliances,Microwave Oven,999,20-liter capacity, defrost and reheat settings.
+Home Appliances,Iron,449,Non-stick soleplate, steam and dry options, adjustable temperature.
+Home Appliances,Juicer,749,Citrus juicer, detachable parts, BPA-free plastic.
+Beauty & Health,Vitamin C Serum,549,Brightens skin, reduces fine lines, antioxidant-rich.
+Beauty & Health,Moisturizer,479,Hydrating, non-greasy, suitable for all skin types.
+Beauty & Health,Shampoo,329,Sulfate-free, infused with argan oil, nourishes hair.
+Beauty & Health,Conditioner,349,Deep conditioning, detangles, adds shine.
+Beauty & Health,Face Wash,299,Gentle cleansing, removes impurities, oil-free formula.
+Beauty & Health,Lip Balm,149,Hydrating, tinted, SPF protection.
+Beauty & Health,Sunscreen,599,Broad-spectrum SPF 50, water-resistant, non-comedogenic.
+Beauty & Health,Hair Oil,379,Coconut-based, strengthens hair, promotes growth.
+Beauty & Health,Eye Cream,499,Reduces puffiness, dark circles, and fine lines.
+Beauty & Health,Hand Cream,259,Moisturizing, non-greasy, softens hands.

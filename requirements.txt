@@ -5,9 +5,6 @@ transformers
 qdrant_client
 langchain-qdrant
 streamlit
-bs4
-librosa
 langchain-google-genai
-streamlit-mic-recorder
 pillow
 python-dotenv
